@@ -9,9 +9,9 @@ digitalPin *digitalPin::first;
 
 digitalPin::digitalPin(): // Constructor
   _pin(0), _status(0)
-  {
+{
   //leerer Constructor;
-  }
+}
 digitalPin::digitalPin(uint8_t a): // Constructor mit Initialisierung
   _pin(a)
 {

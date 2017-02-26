@@ -35,13 +35,13 @@ class digitalPin
     bool read();                      // PIN status lesen
     void write(bool);
 
-  // Operator Overload
-  digitalPin& operator=(bool);
-  digitalPin& operator&&(digitalPin&);
-  digitalPin& operator||(digitalPin&);  
-  digitalPin& operator!(void);  
-  operator bool();
-  
+    // Operator Overload
+    digitalPin& operator=(bool);
+    digitalPin& operator&&(digitalPin&);
+    digitalPin& operator||(digitalPin&);
+    digitalPin& operator!(void);
+    operator bool();
+
   private:                            // privat
     bool _status;
     uint8_t _pin;

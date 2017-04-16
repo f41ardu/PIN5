@@ -16,7 +16,7 @@ volatile uint8_t counter = 0;             // button click counter
 digitalPin Button(5, SWITCH);
 
 // Instantiate 3 LED objects with on and off time in milliseconds
-digitalPin ledGreen(pinGreen, 500, 500),
+digitalPin ledGreen(pinGreen, 10, 5),
            ledYellow(pinYellow, 250, 250),
            ledRed(pinRed, 200, 200);
 
@@ -40,6 +40,7 @@ void loop() {
   }
   if (counter == 1)  {
     ledRed = ledYellow + ledGreen;
+    
   }
   if (counter == 2)  {
     ledRed = !ledRed;
@@ -52,7 +53,7 @@ void loop() {
     ledRed = LOW;
   }
   if (counter == 4)  {
-    ledGreen = HIGH;
+    ledGreen.flash(); // = HIGH;
     ledYellow = HIGH;
     ledRed = HIGH;
   }
